@@ -18,7 +18,7 @@
     }
     .section {
       padding: 20px;
-      max-width: 500px;
+      max-width: 600px;
       margin: auto;
     }
     .auth-form {
@@ -114,10 +114,7 @@
     const password = document.getElementById('password').value.trim();
     const message = document.getElementById('signup-message');
 
-    const { data, error } = await supabase.auth.signUp({
-      email,
-      password
-    });
+    const { data, error } = await supabase.auth.signUp({ email, password });
 
     if (error) {
       message.textContent = error.message;
@@ -134,10 +131,7 @@
     const password = document.getElementById('login-password').value.trim();
     const message = document.getElementById('login-message');
 
-    const { data, error } = await supabase.auth.signInWithPassword({
-      email,
-      password
-    });
+    const { data, error } = await supabase.auth.signInWithPassword({ email, password });
 
     if (error) {
       message.textContent = error.message;
@@ -145,7 +139,6 @@
     } else {
       message.textContent = 'Login successful!';
       message.style.color = 'green';
-      // window.location.href = 'dashboard.html'; // Optional redirect
     }
   });
 </script>
