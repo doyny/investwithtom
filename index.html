@@ -7,8 +7,6 @@
   <style>
     body {
       font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
       background-color: #f0f2f5;
       color: #333;
     }
@@ -18,101 +16,47 @@
       padding: 30px;
       text-align: center;
     }
-    header h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 1.2em;
-      font-style: italic;
-    }
     .section {
-      padding: 30px 20px;
-      max-width: 900px;
+      padding: 20px;
+      max-width: 500px;
       margin: auto;
     }
-    .section h2 {
-      color: #1a237e;
-      font-size: 1.8em;
-      margin-bottom: 10px;
-    }
-    .cta {
-      background-color: #1a237e;
-      color: white;
-      padding: 15px 25px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      border-radius: 8px;
-      margin-top: 20px;
-    }
-    .investment-table {
-      margin-top: 20px;
-      width: 100%;
-      border-collapse: collapse;
-    }
-    .investment-table th, .investment-table td {
-      padding: 10px;
-      border: 1px solid #ddd;
-      text-align: center;
-    }
-    footer {
-      background-color: #1a237e;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
-    }
     .auth-form {
-      background: #ffffff;
-      padding: 30px;
-      border-radius: 16px;
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      max-width: 420px;
-      margin: 30px auto;
-      transition: all 0.3s ease-in-out;
     }
     .form-group {
-      margin-bottom: 22px;
+      margin-bottom: 18px;
     }
-    .auth-form label {
+    label {
       display: block;
       margin-bottom: 6px;
-      font-weight: 600;
-      color: #002b5c;
+      font-weight: bold;
     }
-    .auth-form input {
+    input {
       width: 100%;
-      padding: 14px 16px;
-      background-color: #f0f4ff;
-      border: 2px solid #ccd8ff;
-      border-radius: 10px;
-      font-size: 16px;
-      transition: border-color 0.3s, box-shadow 0.3s;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background: #f9fbff;
     }
-    .auth-form input:focus {
-      border-color: #3A76F0;
-      box-shadow: 0 0 0 3px rgba(58, 118, 240, 0.2);
-      outline: none;
-    }
-    .auth-form button {
+    button {
       width: 100%;
-      padding: 14px;
+      padding: 12px;
       background-color: #3A76F0;
       color: white;
-      border: none;
-      border-radius: 10px;
-      font-size: 16px;
       font-weight: bold;
+      border: none;
+      border-radius: 8px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
     }
-    .auth-form button:hover {
-      background-color: #2e5fbd;
+    button:hover {
+      background-color: #2c5edc;
     }
-    #signup-message,
-    #login-message {
-      margin-top: 15px;
+    #signup-message, #login-message {
+      margin-top: 12px;
       text-align: center;
       font-weight: bold;
     }
@@ -121,111 +65,79 @@
 <body>
 
 <header>
-  <h1>INVEST WITH CONFIDENCE</h1>
-  <p>Your trusted gateway to fast, reliable, and rewarding investments.</p>
+  <h1>Invest with Tom</h1>
+  <p>Secure high-return investments made easy</p>
 </header>
 
-<div class="section" id="home">
-  <h2>Welcome to Invest with Tom</h2>
-  <p>
-    At <strong>Invest with Tom</strong>, your financial growth is our top priority. We specialize in short-term, high-return investments designed for real people like you.
-  </p>
-  <p>
-    Join hundreds of satisfied investors who are already earning with confidence. With us, your money works harder — and smarter.
-  </p>
-</div>
-
-<div class="section" id="catalogue">
-  <h2>Investment Catalogue</h2>
-  <p>Choose an investment package and watch your capital grow:</p>
-  <table class="investment-table">
-    <tr><th>Investment</th><th>Return</th><th>Duration</th></tr>
-    <tr><td>$50</td><td>$250</td><td>3 working days</td></tr>
-    <tr><td>$100</td><td>$500</td><td>3 working days</td></tr>
-    <tr><td>$150</td><td>$600</td><td>3 working days</td></tr>
-    <tr><td>$200</td><td>$1000</td><td>3 working days</td></tr>
-    <tr><td>$250</td><td>$1200</td><td>3 working days</td></tr>
-    <tr><td>$300</td><td>$1500</td><td>3 working days</td></tr>
-    <tr><td>$400</td><td>$2000</td><td>3 working days</td></tr>
-    <tr><td>$500</td><td>$5000</td><td>10 working days</td></tr>
-  </table>
-</div>
-
 <div class="section">
-  <h2 style="text-align: center;">Create an Account</h2>
+  <h2>Create an Account</h2>
   <form id="signup-form" class="auth-form">
     <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" id="email" placeholder="you@example.com" required />
+      <label>Email</label>
+      <input type="email" id="email" required />
     </div>
     <div class="form-group">
-      <label for="password">Password</label>
-      <input type="password" id="password" placeholder="Enter a secure password" required />
+      <label>Password</label>
+      <input type="password" id="password" required />
     </div>
     <button type="submit">Sign Up</button>
     <p id="signup-message"></p>
   </form>
+</div>
 
-  <h2 style="text-align: center;">Log In</h2>
+<div class="section">
+  <h2>Log In</h2>
   <form id="login-form" class="auth-form">
     <div class="form-group">
-      <label for="login-email">Email</label>
-      <input type="email" id="login-email" placeholder="you@example.com" required />
+      <label>Email</label>
+      <input type="email" id="login-email" required />
     </div>
     <div class="form-group">
-      <label for="login-password">Password</label>
-      <input type="password" id="login-password" placeholder="Your password" required />
+      <label>Password</label>
+      <input type="password" id="login-password" required />
     </div>
     <button type="submit">Log In</button>
     <p id="login-message"></p>
   </form>
 </div>
 
-<div class="section" id="contact">
-  <h2>Contact Us</h2>
-  <a href="https://signal.me/#p/+18013585338" target="_blank" style="display: inline-block; background-color: #25D366; color: white; padding: 10px 20px; margin-top: 10px; text-decoration: none; border-radius: 6px;">Chat on Signal</a>
-</div>
-
-<footer>
-  <p>&copy; 2025 Invest with Tom. All rights reserved.</p>
-</footer>
-
-<!-- Supabase JS -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
   const supabase = supabase.createClient(
-    'https://uavjpcqjkmbsdkrazrqn.supabase.co',
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVhdmpwY3Fqa21ic2RrcmF6cnFuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDczODEzNjAsImV4cCI6MjA2Mjk1NzM2MH0.fFya5ixOwDFgDZ_IXnV95on0AsEC8bZ3BVhK8LWzz64'
+    'https://bedlbmyuuyokpfvvarhq.supabase.co',
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJlZGxibXl1dXlva3BmdnZhcmhxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDczODY3OTksImV4cCI6MjA2Mjk2Mjc5OX0.ZcMq7a2fd99G82qZJuFaEideIZFvjyy1qzEsRpOyNIY'
   );
 
-  // Signup Handler
   document.getElementById('signup-form').addEventListener('submit', async (e) => {
     e.preventDefault();
-
     const email = document.getElementById('email').value.trim();
     const password = document.getElementById('password').value.trim();
     const message = document.getElementById('signup-message');
 
-    const { data, error } = await supabase.auth.signUp({ email, password });
+    const { data, error } = await supabase.auth.signUp({
+      email,
+      password
+    });
 
     if (error) {
       message.textContent = error.message;
       message.style.color = 'red';
     } else {
-      message.textContent = 'Sign up successful! Please check your email to verify.';
+      message.textContent = 'Signup successful! Please check your email to confirm.';
       message.style.color = 'green';
     }
   });
 
-  // Login Handler
   document.getElementById('login-form').addEventListener('submit', async (e) => {
     e.preventDefault();
-
     const email = document.getElementById('login-email').value.trim();
     const password = document.getElementById('login-password').value.trim();
     const message = document.getElementById('login-message');
 
-    const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email,
+      password
+    });
 
     if (error) {
       message.textContent = error.message;
@@ -233,10 +145,9 @@
     } else {
       message.textContent = 'Login successful!';
       message.style.color = 'green';
-      window.location.href = "dashboard.html";
+      // window.location.href = 'dashboard.html'; // Optional redirect
     }
   });
 </script>
-
 </body>
 </html>
