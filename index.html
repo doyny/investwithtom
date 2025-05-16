@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -64,6 +63,24 @@
       padding: 15px;
       margin-top: 40px;
     }
+    .contact-button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 10px;
+      margin-right: 10px;
+      text-decoration: none;
+      border-radius: 6px;
+      color: white;
+    }
+    .signal-btn {
+      background-color: #25D366;
+    }
+    .textplus-call-btn {
+      background-color: #4a90e2;
+    }
+    .textplus-download-btn {
+      background-color: #1da1f2;
+    }
   </style>
 </head>
 <body>
@@ -101,7 +118,15 @@
 
 <div class="section" id="contact">
   <h2>Contact Us</h2>
-  <a href="https://signal.me/#p/+18013585338" target="_blank" style="display: inline-block; background-color: #25D366; color: white; padding: 10px 20px; margin-top: 10px; text-decoration: none; border-radius: 6px;">Chat on Signal</a>
+
+  <!-- Signal button -->
+  <a href="https://signal.me/#p/+18013585338" target="_blank" class="contact-button signal-btn">Chat on Signal</a>
+
+  <!-- TextPlus call button -->
+  <a href="tel:+18583804556" class="contact-button textplus-call-btn">textplus/+1 858-380-4556</a>
+
+  <!-- TextPlus download button -->
+  <a href="https://play.google.com/store/apps/details?id=com.gogii.textplus" target="_blank" class="contact-button textplus-download-btn">Download TextPlus</a>
 </div>
 
 <footer>
