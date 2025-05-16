@@ -203,16 +203,12 @@
       email,
       password
     });
-
-    if (error) {
-      message.textContent = error.message;
-      message.style.color = 'red';
-    } else {
-      message.textContent = "Login successful!";
-      message.style.color = 'green';
-      // Optional: redirect or hide/show UI here
-    }
-  });
+if (error) {
+  message.textContent = error.message;
+  message.style.color = 'red';
+} else {
+  window.location.href = "dashboard.html";
+}
 </script>
     <!-- Supabase Client Library -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
